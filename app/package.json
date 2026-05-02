@@ -19,6 +19,8 @@
     "@capacitor/core": "^8.3.1",
     "@capacitor/device": "^8.0.2",
     "@capacitor/ios": "^8.3.1",
-    "@capacitor/screen-orientation": "^8.0.1"
+    "@capacitor/screen-orientation": "^8.0.1",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.14.0"
   }
 }
