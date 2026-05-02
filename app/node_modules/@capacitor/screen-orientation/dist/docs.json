@@ -1,0 +1,207 @@
+{
+  "api": {
+    "name": "ScreenOrientationPlugin",
+    "slug": "screenorientationplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "orientation",
+        "signature": "() => Promise<ScreenOrientationResult>",
+        "parameters": [],
+        "returns": "Promise<ScreenOrientationResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "4.0.0"
+          }
+        ],
+        "docs": "Returns the current screen orientation.",
+        "complexTypes": [
+          "ScreenOrientationResult"
+        ],
+        "slug": "orientation"
+      },
+      {
+        "name": "lock",
+        "signature": "(options: OrientationLockOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "OrientationLockOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "4.0.0"
+          }
+        ],
+        "docs": "Locks the screen orientation.\n\nStarting in Android targetSdk 36, this method has no effect for large screens (e.g. tablets) on Android 16 and higher.\nYou may opt-out of this behavior in your app by adding `<property android:name=\"android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY\" android:value=\"true\" />` to your `AndroidManifest.xml` inside `<application>` or `<activity>`.\nKeep in mind though that this opt-out is temporary and will no longer work for Android 17. Android discourages setting specific orientations for large screens.\nRegular Android phones are unaffected by this change.\nFor more information check the Android docs at https://developer.android.com/about/versions/16/behavior-changes-16#adaptive-layouts",
+        "complexTypes": [
+          "OrientationLockOptions"
+        ],
+        "slug": "lock"
+      },
+      {
+        "name": "unlock",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "4.0.0"
+          }
+        ],
+        "docs": "Unlocks the screen's orientation.",
+        "complexTypes": [],
+        "slug": "unlock"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: 'screenOrientationChange', listenerFunc: (orientation: ScreenOrientationResult) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "'screenOrientationChange'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "(orientation: ScreenOrientationResult) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "4.0.0"
+          }
+        ],
+        "docs": "Listens for screen orientation changes.",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "ScreenOrientationResult"
+        ],
+        "slug": "addlistenerscreenorientationchange-"
+      },
+      {
+        "name": "removeAllListeners",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "4.0.0"
+          }
+        ],
+        "docs": "Removes all listeners.",
+        "complexTypes": [],
+        "slug": "removealllisteners"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "ScreenOrientationResult",
+      "slug": "screenorientationresult",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "type",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [
+            "OrientationType"
+          ],
+          "type": "OrientationType"
+        }
+      ]
+    },
+    {
+      "name": "OrientationLockOptions",
+      "slug": "orientationlockoptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "orientation",
+          "tags": [],
+          "docs": "Note: Typescript v5.2+ users should import OrientationLockType from @capacitor/screen-orientation.",
+          "complexTypes": [
+            "OrientationLockType"
+          ],
+          "type": "OrientationLockType"
+        }
+      ]
+    },
+    {
+      "name": "PluginListenerHandle",
+      "slug": "pluginlistenerhandle",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "remove",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "() => Promise<void>"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [
+    {
+      "name": "OrientationLockType",
+      "slug": "orientationlocktype",
+      "docs": "",
+      "types": [
+        {
+          "text": "'any'",
+          "complexTypes": []
+        },
+        {
+          "text": "'natural'",
+          "complexTypes": []
+        },
+        {
+          "text": "'landscape'",
+          "complexTypes": []
+        },
+        {
+          "text": "'portrait'",
+          "complexTypes": []
+        },
+        {
+          "text": "'portrait-primary'",
+          "complexTypes": []
+        },
+        {
+          "text": "'portrait-secondary'",
+          "complexTypes": []
+        },
+        {
+          "text": "'landscape-primary'",
+          "complexTypes": []
+        },
+        {
+          "text": "'landscape-secondary'",
+          "complexTypes": []
+        }
+      ]
+    }
+  ],
+  "pluginConfigs": []
+}
