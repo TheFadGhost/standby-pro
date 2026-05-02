@@ -3,7 +3,7 @@
 This plan outlines the development of a high-polish, cross-platform Standby Mode app using Flutter.
 
 ## Phase 1: Foundation & Core Engine
-- [ ] **Step 1: Project Scaffolding & Environment.** Initialize Flutter project, setup folder structure (Clean Architecture), and configure cross-platform dependencies.
+- [x] **Step 1: Project Scaffolding & Environment.** Initialize Flutter project, setup folder structure (Clean Architecture), and configure cross-platform dependencies.
 - [ ] **Step 2: Charging & Orientation Logic.** Implement platform-specific listeners to detect power connection and landscape orientation triggers.
 - [ ] **Step 3: Core Rendering Loop.** Create the "Eco-Logic" engine to manage refresh rates and prevent device heating.
 

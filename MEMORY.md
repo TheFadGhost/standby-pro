@@ -1,20 +1,19 @@
 # Project Memory: Standby Mode App
 
 ## State Matrix
-- **Overall Progress:** 5%
-- **Current Phase:** Brainstorming & Requirements
-- **Primary Blocker:** User Approval of Plan
-- **Next Immediate Action:** Answer clarifying questions and begin tech stack validation.
+- **Overall Progress:** 15%
+- **Current Phase:** Phase 1: Foundation
+- **Primary Blocker:** None
+- **Next Immediate Action:** Step 2: Implement Charging & Orientation listeners.
 
 ## Key Architecture & Decisions
-- Tech Stack: Flutter (Cross-platform).
-- Focus: Fixing layout rigidity and performance (heat/battery).
-- Pricing Model: Initial Open-Source release; future Ethical Monetization (£0.99/mo) for premium assets.
-- Design: Emil Kowalski philosophy (Polished animations/Spring physics).
+- Tech Stack: Flutter (App subfolder).
+- Folder Structure: Clean Architecture (Core/Features/Shared).
+- Assets: References moved to `assets/references`.
 
 ## Recent Actions (Max 3)
-1. Scraped Play Store reviews to identify critical 4-star gaps.
-2. Created master `PLAN.md` with monetization roadmap.
-3. Updated project memory to reflect long-term commercial goals.
+1. Reorganized workspace (moved images to `assets/references`).
+2. Scaffolded Flutter app in `/app` directory.
+3. Established Clean Architecture folder structure.
 
 *Note: Automated Git features will be initialized during the first planning step.*
