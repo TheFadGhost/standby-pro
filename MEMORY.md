@@ -1,19 +1,19 @@
 # Project Memory: Standby Mode App
 
 ## State Matrix
-- **Overall Progress:** 45%
+- **Overall Progress:** 55%
 - **Current Phase:** Phase 2: UI Framework
 - **Primary Blocker:** None
-- **Next Immediate Action:** Step 5: Theme & Font Lab Engine.
+- **Next Immediate Action:** Step 6: Basic Widget Library (Clocks).
 
 ## Key Architecture & Decisions
 - Tech Stack: Capacitor + React.
-- Layout Engine: `StandbyDashboard` implemented with support for `duo` and `single` layouts.
-- Transitions: Using `AnimatePresence` and custom cubic-beziers for Emil Kowalski-style polish.
+- Theme Engine: `ThemeProvider` with 5 high-variety presets (Retro, Neon, Minimal, Solar, Matrix).
+- Font Lab: Implemented state for dynamic weight, kerning, and size scaling.
 
 ## Recent Actions (Max 3)
-1. Developed `dashboard.tsx` with dynamic Duo/Single mode switching.
-2. Created `placeholder_widget.tsx` for layout testing and visual feedback.
-3. Updated `PLAN.md` and committed changes to GitHub.
+1. Built the Theme Engine with `activeTheme` context.
+2. Created `theme_config.ts` containing 5 unique presets inspired by user screenshots.
+3. Implemented the "Font Lab" state matrix for granular typography control.
 
 *Note: Automated Git features will be initialized during the first planning step.*
