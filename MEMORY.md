@@ -9,11 +9,12 @@
 ## Key Architecture & Decisions
 - Tech Stack: Flutter (Cross-platform).
 - Focus: Fixing layout rigidity and performance (heat/battery).
-- Pricing: Fully Free/Open Source.
+- Pricing Model: Initial Open-Source release; future Ethical Monetization (£0.99/mo) for premium assets.
+- Design: Emil Kowalski philosophy (Polished animations/Spring physics).
 
 ## Recent Actions (Max 3)
-1. Analyzed 10+ screenshots and Play Store reviews for competitive gap analysis.
-2. Created comprehensive `summer-planner.md` with 3 innovative features.
-3. Initialized Git repository and made the first commit.
+1. Scraped Play Store reviews to identify critical 4-star gaps.
+2. Created master `PLAN.md` with monetization roadmap.
+3. Updated project memory to reflect long-term commercial goals.
 
 *Note: Automated Git features will be initialized during the first planning step.*
