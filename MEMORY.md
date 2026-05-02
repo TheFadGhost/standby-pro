@@ -1,19 +1,19 @@
 # Project Memory: Standby Mode App
 
 ## State Matrix
-- **Overall Progress:** 85%
-- **Current Phase:** Phase 3: Advanced Features
+- **Overall Progress:** 90%
+- **Current Phase:** Phase 4: Finalization
 - **Primary Blocker:** None
-- **Next Immediate Action:** Step 9: Smart Night Mode (Ambient-aware tinting).
+- **Next Immediate Action:** Step 10: Documentation & README (GitHub Polish).
 
 ## Key Architecture & Decisions
 - Tech Stack: Capacitor + React.
-- Animation Layer: Implemented `animations.ts` with custom spring physics (stiffness/damping) for an "expensive" feel.
-- Feedback: Responsive `TAP_FEEDBACK` (scale down on press) applied to all interactive elements.
+- Smart Night Mode: Implemented time-aware red tint filter (sepia/hue-rotate) to preserve night vision.
+- Orchestration: `StandbyScreen` created to integrate time, themes, layout, and night mode logic.
 
 ## Recent Actions (Max 3)
-1. Created `animations.ts` to centralize spring-physics configs.
-2. Built `quick_actions.tsx` with backdrop-blur and physics-based entry animations.
-3. Applied origin-aware transitions to layout and theme switching modules.
+1. Implemented `night_mode.ts` utility for auto-dimming and eye-strain reduction.
+2. Built the `StandbyScreen` orchestrator, connecting all widgets and services.
+3. Updated `PLAN.md` and committed full Phase 3 features to GitHub.
 
 *Note: Automated Git features will be initialized during the first planning step.*
