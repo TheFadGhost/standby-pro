@@ -14,7 +14,7 @@ This plan outlines the development of a high-polish, cross-platform Standby Mode
 
 ## Phase 3: Advanced Features & Polish
 - [x] **Step 7: Media & Integration Widgets.** Build custom replicas for Spotify/Music control and Calendar/Weather integration.
-- [ ] **Step 8: Animation & Transition Layer.** Apply Emil Kowalski's design principles (spring physics, origin-aware popovers, and responsive feedback).
+- [x] **Step 8: Animation & Transition Layer.** Apply Emil Kowalski's design principles (spring physics, origin-aware popovers, and responsive feedback).
 - [ ] **Step 9: Smart Night Mode.** Implement ambient-aware red tinting and auto-dimming logic.
 
 ## Phase 4: Open Source Release & Prep

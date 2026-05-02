@@ -1,19 +1,19 @@
 # Project Memory: Standby Mode App
 
 ## State Matrix
-- **Overall Progress:** 75%
+- **Overall Progress:** 85%
 - **Current Phase:** Phase 3: Advanced Features
 - **Primary Blocker:** None
-- **Next Immediate Action:** Step 8: Animation & Transition Layer (Emil Kowalski principles).
+- **Next Immediate Action:** Step 9: Smart Night Mode (Ambient-aware tinting).
 
 ## Key Architecture & Decisions
 - Tech Stack: Capacitor + React.
-- Integration Strategy: High-polish replica widgets (Media, Weather, Calendar) for cross-platform stability.
-- Visuals: Using `lucide-react` for consistent iconography and `framer-motion` for layout-aware animations.
+- Animation Layer: Implemented `animations.ts` with custom spring physics (stiffness/damping) for an "expensive" feel.
+- Feedback: Responsive `TAP_FEEDBACK` (scale down on press) applied to all interactive elements.
 
 ## Recent Actions (Max 3)
-1. Built `integration_widgets.tsx` with Media, Weather, and Calendar replicas.
-2. Verified "flawless" cross-platform UI consistency by using SVG icons and relative layouts.
-3. Updated `PLAN.md` and committed changes to GitHub.
+1. Created `animations.ts` to centralize spring-physics configs.
+2. Built `quick_actions.tsx` with backdrop-blur and physics-based entry animations.
+3. Applied origin-aware transitions to layout and theme switching modules.
 
 *Note: Automated Git features will be initialized during the first planning step.*
