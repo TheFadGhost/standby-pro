@@ -10,7 +10,7 @@ This plan outlines the development of a high-polish, cross-platform Standby Mode
 ## Phase 2: UI Framework & Layouts
 - [x] **Step 4: Duo/Single Layout Engine.** Build the dynamic grid system that supports side-by-side widgets and "Single Focus" fullscreen mode.
 - [x] **Step 5: Theme & Font Lab Engine.** Implement the customization system (Google Fonts, weight/kerning sliders, and color palettes).
-- [ ] **Step 6: Basic Widget Library.** Develop the first set of core widgets: Analog Clock, Digital Clock, and Flip Clock.
+- [x] **Step 6: Basic Widget Library.** Develop the first set of core widgets: Analog Clock, Digital Clock, and Flip Clock.
 
 ## Phase 3: Advanced Features & Polish
 - [ ] **Step 7: Media & Integration Widgets.** Build custom replicas for Spotify/Music control and Calendar/Weather integration.
