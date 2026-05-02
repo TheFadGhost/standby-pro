@@ -8,7 +8,7 @@ This plan outlines the development of a high-polish, cross-platform Standby Mode
 - [x] **Step 3: Core Rendering Loop.** Create the "Eco-Logic" engine to manage refresh rates and prevent device heating.
 
 ## Phase 2: UI Framework & Layouts
-- [ ] **Step 4: Duo/Single Layout Engine.** Build the dynamic grid system that supports side-by-side widgets and "Single Focus" fullscreen mode.
+- [x] **Step 4: Duo/Single Layout Engine.** Build the dynamic grid system that supports side-by-side widgets and "Single Focus" fullscreen mode.
 - [ ] **Step 5: Theme & Font Lab Engine.** Implement the customization system (Google Fonts, weight/kerning sliders, and color palettes).
 - [ ] **Step 6: Basic Widget Library.** Develop the first set of core widgets: Analog Clock, Digital Clock, and Flip Clock.
 
