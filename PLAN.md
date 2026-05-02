@@ -18,8 +18,8 @@ This plan outlines the development of a high-polish, cross-platform Standby Mode
 - [x] **Step 9: Smart Night Mode.** Implement ambient-aware red tinting and auto-dimming logic.
 
 ## Phase 4: Open Source Release & Prep
-- [ ] **Step 10: Documentation & README.** Create a professional GitHub repository presence with GIFs and clear setup instructions.
-- [ ] **Step 11: Final Performance Audit.** Verify battery impact and memory usage on both iOS and Android.
+- [x] **Step 10: Documentation & README.** Create a professional GitHub repository presence with GIFs and clear setup instructions.
+- [x] **Step 11: Final Performance Audit.** Verify battery impact and memory usage on both iOS and Android.
 
 ## Phase 5: Post-Launch Monetization (Future)
 - **Strategy:** Ethical Monetization.
