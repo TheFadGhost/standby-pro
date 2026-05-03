@@ -1,0 +1,12 @@
+.superpowers/
+app/.dart_tool/
+app/.flutter-plugins-dependencies
+app/build/
+app/android/.gradle/
+app/android/build/
+app/android/app/build/
+app/android/local.properties
+app/ios/Flutter/ephemeral/
+app/ios/Pods/
+app/ios/.symlinks/
+*.log

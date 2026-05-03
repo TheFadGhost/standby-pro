@@ -1,31 +1,34 @@
 # Implementation Plan: Standby Pro
 
-This plan outlines the development of a high-polish, cross-platform Standby Mode app using Flutter.
+## Phase 1: Rebuild Foundation
+- [x] Replace the broken Capacitor app with a clean Flutter project.
+- [x] Generate Android and iOS targets.
+- [x] Set Android package id to `com.ytchannel.standbypro`.
+- [x] Add native Android system bridge for keep-awake, brightness, and media commands.
 
-## Phase 1: Foundation & Core Engine
-- [x] **Step 1: Project Scaffolding & Environment.** Initialize Flutter project, setup folder structure (Clean Architecture), and configure cross-platform dependencies.
-- [x] **Step 2: Charging & Orientation Logic.** Implement platform-specific listeners to detect power connection and landscape orientation triggers.
-- [x] **Step 3: Core Rendering Loop.** Create the "Eco-Logic" engine to manage refresh rates and prevent device heating.
+## Phase 2: Core StandBy Experience
+- [x] Build Single Focus and Duo layouts.
+- [x] Add digital, analog, flip, and text clock faces.
+- [x] Add weather, calendar, and music widget panels with fallback data.
+- [x] Add customization controls for layout, widgets, clock face, size, glow, dimming, seconds, night mode, burn-in protection, and keep-awake.
 
-## Phase 2: UI Framework & Layouts
-- [x] **Step 4: Duo/Single Layout Engine.** Build the dynamic grid system that supports side-by-side widgets and "Single Focus" fullscreen mode.
-- [x] **Step 5: Theme & Font Lab Engine.** Implement the customization system (Google Fonts, weight/kerning sliders, and color palettes).
-- [x] **Step 6: Basic Widget Library.** Develop the first set of core widgets: Analog Clock, Digital Clock, and Flip Clock.
+## Phase 3: Performance & Bedside Safety
+- [x] Add adaptive clock cadence to avoid wasteful 60/120Hz idle updates.
+- [x] Add app lifecycle pause behavior for background state.
+- [x] Add night mode policy and OLED burn-in pixel shifting.
+- [x] Avoid continuous blur/glow animation loops; reserve motion for interactions.
 
-## Phase 3: Advanced Features & Polish
-- [x] **Step 7: Media & Integration Widgets.** Build custom replicas for Spotify/Music control and Calendar/Weather integration.
-- [x] **Step 8: Animation & Transition Layer.** Apply Emil Kowalski's design principles (spring physics, origin-aware popovers, and responsive feedback).
-- [x] **Step 9: Smart Night Mode.** Implement ambient-aware red tinting and auto-dimming logic.
+## Phase 4: Verification
+- [x] Add domain and widget tests.
+- [x] Run `flutter test`.
+- [x] Run `flutter analyze`.
+- [x] Build Android debug APK.
+- [ ] Test on a physical Android phone.
+- [ ] Build/sign on iOS using macOS and Xcode.
 
-## Phase 4: Open Source Release & Prep
-- [x] **Step 10: Documentation & README.** Create a professional GitHub repository presence with GIFs and clear setup instructions.
-- [x] **Step 11: Final Performance Audit.** Verify battery impact and memory usage on both iOS and Android.
-
-## Phase 5: Post-Launch Monetization (Future)
-- **Strategy:** Ethical Monetization.
-- **Pricing:** £0.99/mo or £9.99/year.
-- **Premium Features (to be gated later):** 
-    - Exclusive "Designer" clock faces.
-    - Advanced "Font Lab" experimental typography.
-    - "Vibes Radio" custom YouTube/URL streams.
-- **Implementation:** The app will be built fully functional initially. A `PremiumManager` service will be added later to check subscription status and gate specific UI components.
+## Phase 5: Next Features
+- [ ] Add runtime permission flows for calendar, location, and notifications.
+- [ ] Replace fallback calendar data with real device calendar events.
+- [ ] Add user-selectable city/location weather.
+- [ ] Expand Android now-playing metadata support beyond transport controls.
+- [ ] Add photo frame mode and timer/stopwatch widgets.

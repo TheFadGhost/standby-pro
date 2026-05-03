@@ -1,111 +1,71 @@
-# Standby Pro 🌙
+# Standby Pro
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Platform: iOS / Android](https://img.shields.io/badge/Platform-iOS%20%2F%20Android-blue.svg)](#)
-[![Tech: Capacitor + React](https://img.shields.io/badge/Tech-Capacitor%20%2B%20React-61dafb.svg)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Platform: Android / iOS](https://img.shields.io/badge/Platform-Android%20%2F%20iOS-blue.svg)](#)
+[![Tech: Flutter](https://img.shields.io/badge/Tech-Flutter-02569B.svg)](#)
 
-> A high-polish, open-source alternative to iOS Standby Mode. Built for cross-platform visual excellence and bedside utility.
+Standby Pro is an open-source, Flutter-based bedside display for Android and iPhone. It turns a charging phone into a polished always-on clock and widget surface with large readable clock faces, Duo widgets, night mode, and OLED-aware power behavior.
 
-Standby Pro transforms your phone into a smart, minimalist display while charging. Designed with **Emil Kowalski's** design engineering principles, it focuses on buttery-smooth animations, energy efficiency, and deep customization.
+The design is inspired by modern StandBy displays, but uses original layouts, themes, controls, and motion.
 
----
+## Features
 
-## ✨ Key Features
+- Single Focus and Duo modes for fullscreen clocks or side-by-side widgets.
+- Digital, analog, flip, and text clock faces with themeable typography, size, glow, and brightness.
+- Weather, calendar, and music widgets with graceful fallback data when phone permissions or native integrations are unavailable.
+- Android media control bridge for play/pause, next, and previous commands.
+- Night mode tint for bedside hours, dimming controls, and OLED burn-in pixel shifting.
+- Adaptive clock cadence: minute-level updates by default, second-level only when seconds are enabled, and long pauses when the app is backgrounded.
+- Generated Android and iOS projects from one Flutter codebase.
 
-### 🚀 Performance & Logic
-- **Eco-Logic Rendering Engine**: Intelligent refresh-rate scaling (1Hz in standby) to eliminate phone heating and excessive battery drain.
-- **Smart Charging Detection**: Automatically triggers when the device is plugged in (powered by Capacitor).
-- **Dual-Orientation Support**: Primary landscape optimization with full portrait fallback.
+## Tech Stack
 
-### 🎨 Visuals & UI
-- **Single Focus & Duo Modes**: Choose between one large fullscreen widget or side-by-side productivity panels.
-- **The Font Lab**: Real-time control over typography weight, kerning, and sizing.
-- **High-Variety Themes**:
-    - **Retro Flip**: Physical-feel 3D mechanical clock.
-    - **Neon Pulse**: High-intensity glow for modern setups.
-    - **Solar Gradient**: Warm, ambient lighting for bedside use.
-    - **Matrix Digital**: Minimalist green terminal aesthetic.
+- Flutter 3.41+ and Dart 3.11+
+- Android package id: `com.ytchannel.standbypro`
+- Local persistence: `shared_preferences`
+- Weather: Open-Meteo HTTP fallback
+- Native bridge: Flutter `MethodChannel` named `standby_pro/system`
 
-### 🛌 Bedside Utility
-- **Smart Night Mode**: Ambient-aware red-tint filter (sepia/hue-shift) to preserve night vision.
-- **High-Polish Widgets**: Custom replicas of Media Control (Spotify-style), Weather, and Calendar.
-
----
-
-## 🛠 Tech Stack
-
-- **Framework**: [Capacitor](https://capacitorjs.com/) (Cross-platform bridge)
-- **UI Library**: [React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/) (Spring physics & 3D transforms)
-- **Icons**: [Lucide React](https://lucide.dev/)
-
----
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
-- Node.js (v18+)
-- Android Studio (for Android builds)
-- Xcode (for iOS builds - macOS only)
 
-### Installation
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/TheFadGhost/standby-pro.git
-   cd standby-pro/app
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Build & Sync with Native Platforms:
-   ```bash
-   npm run build
-   npx cap sync
-   ```
-4. Run on your device:
-   ```bash
-   npx cap run android
-   # OR
-   npx cap run ios
-   ```
+- Flutter SDK. On this machine it is installed at `C:\Users\AI\flutter`.
+- Android Studio for Android builds.
+- Xcode on macOS for iOS signing and device builds.
 
----
+### Android
 
-## 🏗 Architecture
+```powershell
+cd app
+$env:JAVA_HOME='C:\Program Files\Android\Android Studio\jbr'
+$env:Path="$env:JAVA_HOME\bin;$env:Path"
+C:\Users\AI\flutter\bin\flutter.bat pub get
+C:\Users\AI\flutter\bin\flutter.bat build apk --debug
+```
 
-The project follows **Clean Architecture** principles to ensure the UI remains independent of the platform logic:
+Open `app/android` in Android Studio if you want the native Android project, or open `app` as the Flutter project.
 
-- `lib/core`: Core utilities (Eco-loop, Night Mode logic, Animations).
-- `lib/features/standby`: Main feature domain, presentation (widgets), and data management.
-- `lib/shared`: Reusable high-polish UI components.
+### Tests
 
----
+```powershell
+cd app
+C:\Users\AI\flutter\bin\flutter.bat test
+C:\Users\AI\flutter\bin\flutter.bat analyze
+```
 
-## 💰 Roadmap & Monetization
+## Project Layout
 
-This project is currently **100% Open Source**. Future updates will include:
-- **Designer Packs**: Exclusive premium themes for £0.99/mo.
-- **Advanced Font Lab**: Experimental typography features.
-- **Vibes Radio**: Integrated Lo-fi/YouTube streams.
+- `app/lib/src/domain`: settings, themes, widget configs, and integration snapshots.
+- `app/lib/src/core`: clock cadence, night mode, and OLED burn-in policies.
+- `app/lib/src/features/standby`: the main StandBy UI, clock faces, and widget panels.
+- `app/lib/src/services`: native system bridge and weather service.
+- `app/test`: domain and widget tests for the core behavior.
 
----
+## iOS Note
 
-## 🤝 Contributing
+The iOS project is generated and kept cross-platform, but this Windows workspace cannot perform final iPhone signing or device validation. Build and signing must be completed on macOS with Xcode.
 
-Contributions are welcome! If you have a cool theme or widget idea:
-1. Fork the Project.
-2. Create your Feature Branch (`git checkout -b feature/AmazingTheme`).
-3. Commit your Changes (`git commit -m 'Add AmazingTheme'`).
-4. Push to the Branch (`git push origin feature/AmazingTheme`).
-5. Open a Pull Request.
+## License
 
----
-
-## 📜 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
----
-
-*Built with ❤️ for the [YT Channel Open Source Community](https://github.com/TheFadGhost).*
+MIT. See [LICENSE](LICENSE).

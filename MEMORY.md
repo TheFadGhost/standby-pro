@@ -1,20 +1,19 @@
 # Project Memory: Standby Mode App
 
 ## State Matrix
-- **Overall Progress:** 100%
-- **Current Phase:** Completed
-- **Primary Blocker:** None
-- **Next Immediate Action:** Finalize GitHub release and share with the community.
+- **Overall Progress:** 82%
+- **Current Phase:** Flutter core rebuild implemented and locally verified
+- **Primary Blocker:** iOS device build/signing requires macOS and Xcode; Android device UX still needs hands-on testing.
+- **Next Immediate Action:** Test `app/build/app/outputs/flutter-apk/app-debug.apk` on a real Android phone and tune the standby UX from device feedback.
 
 ## Key Architecture & Decisions
-- Tech Stack: Capacitor + React (High-polish cross-platform).
-- Core Engine: Eco-Logic (1Hz standby) for battery efficiency.
-- Licensing: MIT Open Source.
-- Monetization: Roadmap established for £0.99/mo premium features.
+- Tech Stack: Flutter + Dart with generated Android/iOS projects.
+- Android Package: `com.ytchannel.standbypro`.
+- Core Engine: Adaptive clock cadence, OLED burn-in offsets, night mode tint policy, native keep-awake/brightness/media channel.
+- Integrations: Calendar/weather/music have useful fallback states; Android media commands use a native MethodChannel.
+- Product Direction: Inspired original StandBy experience, not a literal clone; no ads or in-app purchases in the first build.
 
 ## Recent Actions (Max 3)
-1. Completed full UI implementation with 5+ high-variety themes and 3 widget classes.
-2. Built a professional, GitHub-ready README.md and LICENSE.
-3. Pushed the final production-ready codebase to `TheFadGhost/standby-pro`.
-
-*Note: Automated Git features will be initialized during the first planning step.*
+1. Replaced the broken Capacitor/React app with a clean Flutter project in `app`.
+2. Implemented StandBy UI, Duo/single layouts, clocks, widget panels, customization sheet, persistence models, and performance policies.
+3. Verified `flutter test`, `flutter analyze`, and Android debug APK build using Android Studio JBR.
