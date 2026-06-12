@@ -30,7 +30,7 @@ The design is inspired by modern StandBy displays, but uses original layouts, th
 
 ### Prerequisites
 
-- Flutter SDK. On this machine it is installed at `C:\Users\AI\flutter`.
+- Flutter SDK available on your `PATH`.
 - Android Studio for Android builds.
 - Xcode on macOS for iOS signing and device builds.
 
@@ -40,8 +40,8 @@ The design is inspired by modern StandBy displays, but uses original layouts, th
 cd app
 $env:JAVA_HOME='C:\Program Files\Android\Android Studio\jbr'
 $env:Path="$env:JAVA_HOME\bin;$env:Path"
-C:\Users\AI\flutter\bin\flutter.bat pub get
-C:\Users\AI\flutter\bin\flutter.bat build apk --debug
+flutter pub get
+flutter build apk --debug
 ```
 
 Open `app/android` in Android Studio if you want the native Android project, or open `app` as the Flutter project.
@@ -50,8 +50,8 @@ Open `app/android` in Android Studio if you want the native Android project, or 
 
 ```powershell
 cd app
-C:\Users\AI\flutter\bin\flutter.bat test
-C:\Users\AI\flutter\bin\flutter.bat analyze
+flutter test
+flutter analyze
 ```
 
 ## Project Layout
